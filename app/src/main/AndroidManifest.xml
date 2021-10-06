@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Anime_app">
         <activity
-            android:name="com.example.SyedFatima_AnimeApp.MainActivity"
+            android:name=".FormScreen"
+            android:exported="true" />
+        <activity
+            android:name=".ListScreen"
+            android:exported="true" />
+        <activity
+            android:name=".PrincipalScreen"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -10,12 +10,29 @@
         <entry key="app/src/main/res/drawable/custom_lock_icon.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/email_focus.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.1712962962962963" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.15921052631578947" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1600877192982456" />
+        <entry key="app/src/main/res/drawable/ic_list.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.15921052631578947" />
         <entry key="app/src/main/res/drawable/lock_focus.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/spinner_item.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/activity_form_screen.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_screen.xml" value="0.26973684210526316" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_principal_screen.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/fragment_form.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/item_list.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.2662337662337662" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2833333333333333" />
       </map>
     </option>
   </component>
