@@ -21,6 +21,8 @@ public class PrincipalScreen extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.main_menu);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
+
         bottomNav.setOnNavigationItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             switch (item.getItemId()){
