@@ -10,15 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Anime_app">
         <activity
-            android:name=".FormScreen"
-            android:exported="true" />
-        <activity
             android:name=".ListScreen"
             android:exported="true" />
         <activity
             android:name=".PrincipalScreen"
             android:exported="true" />
         <activity
+            android:theme="@style/SplashTheme"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

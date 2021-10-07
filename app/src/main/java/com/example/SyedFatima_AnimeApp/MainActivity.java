@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SystemClock.sleep(500); //sleep per poder mostrar el splash screen
+        setTheme(R.style.Theme_Anime_app);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.15921052631578947" />
         <entry key="app/src/main/res/drawable/lock_focus.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/spinner_item.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/splash.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/layout/activity_form_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_list_screen.xml" value="0.26973684210526316" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
