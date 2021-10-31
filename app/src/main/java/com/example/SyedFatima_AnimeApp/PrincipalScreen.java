@@ -4,20 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.Normalizer;
 
 public class PrincipalScreen extends AppCompatActivity {
 
+    private AnimeDBHelper dbHelper;
+    private SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal_screen);
+
+        //Creation of the dbHelper
+        dbHelper = new AnimeDBHelper(this);
+        db = dbHelper.getWritableDatabase();
 
         BottomNavigationView bottomNav = findViewById(R.id.main_menu);
 
@@ -27,15 +36,15 @@ public class PrincipalScreen extends AppCompatActivity {
             Fragment selectedFragment = null;
             switch (item.getItemId()){
                 case R.id.nav_home:
-                    selectedFragment = new FragmentHome();
+                    selectedFragment = new FragmentHome(dbHelper, db);
                     break;
 
                 case R.id.nav_list:
-                    selectedFragment = new FragmentList();
+                    selectedFragment = new FragmentList(dbHelper, db);
                     break;
 
                 case R.id.nav_add:
-                    selectedFragment = new FragmentForm();
+                    selectedFragment = new FragmentForm(dbHelper, db);
                     break;
             }
 
@@ -44,4 +53,12 @@ public class PrincipalScreen extends AppCompatActivity {
             return true;
         });
     }
+
+    @Override
+    protected void onDestroy() {
+        dbHelper.close();
+        db.close();
+        super.onDestroy();
+    }
+
 }

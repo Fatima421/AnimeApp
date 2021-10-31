@@ -1,5 +1,7 @@
 package com.example.SyedFatima_AnimeApp;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,10 +10,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
+import com.example.SyedFatima_AnimeApp.Model.Anime;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,9 +38,16 @@ public class FragmentForm extends Fragment implements AdapterView.OnItemSelected
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private AnimeDBHelper dbHelper;
+    private SQLiteDatabase db;
 
     public FragmentForm() {
         // Required empty public constructor
+    }
+
+    public FragmentForm(AnimeDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
     }
 
     /**
@@ -73,12 +89,38 @@ public class FragmentForm extends Fragment implements AdapterView.OnItemSelected
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_form, container, false);
 
+        //finding all the properties in the view to program in the code
         spinner = (Spinner) v.findViewById(R.id.spinner);
+        FloatingActionButton btnAdd = v.findViewById(R.id.addBtn);
+        EditText animeNameTxt = v.findViewById(R.id.txtName);
+        EditText animeRankingTxt = v.findViewById(R.id.nbrRating);
 
+        //an array to be able to show the list in the spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.genres, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String animeName = "";
+                String animeGenre = "";
+                int animeRanking = 0;
+                if (!animeNameTxt.getText().toString().isEmpty()){
+                    animeName = animeNameTxt.getText().toString();
+                }
+                if (!animeRankingTxt.getText().toString().isEmpty()) {
+                    animeRanking = Integer.parseInt(animeRankingTxt.getText().toString());
+                }
+                if (!spinner.getSelectedItem().equals("genre")){
+                    animeGenre = spinner.getSelectedItem().toString();
+                }
+                Anime anime = new Anime(animeName,animeGenre,animeRanking);
+                dbHelper.insertAnime(db, anime);
+                Toast.makeText(getActivity(), "You have inserted correctly an anime to the list!",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
 
         return v;
     }

@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#00BCD4"
     tools:context=".FragmentHome">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/home_bg">
 
-</FrameLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.021"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sparkles"
+            app:lottie_speed="2" />
+
+        <ImageView
+            android:id="@+id/tran_bg_img3"
+            android:layout_width="435dp"
+            android:layout_height="388dp"
+            android:layout_marginBottom="88dp"
+            android:src="@drawable/lining_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lottie_main"
+            app:layout_constraintVertical_bias="0.986" />
+
+        <ImageView
+            android:id="@+id/tran_bg_img"
+            android:layout_width="177dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="164dp"
+            android:src="@android:drawable/screen_background_light_transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/tran_bg_img2"
+            android:layout_width="177dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="164dp"
+            android:src="@android:drawable/screen_background_light_transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tran_bg_img" />
+
+        <Button
+            android:id="@+id/goToAddAnime_btn"
+            android:layout_width="138dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="24dp"
+            android:autoText="false"
+            android:backgroundTint="@color/purple03"
+            android:clickable="true"
+            android:text="ADD ANIME"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tran_bg_img"
+            app:layout_constraintEnd_toEndOf="@+id/tran_bg_img"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toStartOf="@+id/tran_bg_img" />
+
+        <Button
+            android:id="@+id/goToSeeAnimeList_btn"
+            android:layout_width="138dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="24dp"
+            android:autoText="false"
+            android:backgroundTint="@color/purple03"
+            android:text="SEE ANIME LIST"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tran_bg_img2"
+            app:layout_constraintEnd_toEndOf="@+id/tran_bg_img2"
+            app:layout_constraintStart_toStartOf="@+id/tran_bg_img2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="109dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/add"
+            app:layout_constraintEnd_toEndOf="@+id/tran_bg_img"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/tran_bg_img"
+            app:layout_constraintTop_toTopOf="@+id/tran_bg_img" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="116dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/list"
+            app:layout_constraintEnd_toEndOf="@+id/tran_bg_img2"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="@+id/tran_bg_img2"
+            app:layout_constraintTop_toTopOf="@+id/tran_bg_img2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

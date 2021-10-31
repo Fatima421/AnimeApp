@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
                 if (txtUsername.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")){
                     lblLoginResult.setText("Login correcte");
                     startActivity(goToPrincipalScreen);

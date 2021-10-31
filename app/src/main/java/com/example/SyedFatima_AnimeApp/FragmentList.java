@@ -1,12 +1,31 @@
 package com.example.SyedFatima_AnimeApp;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
+import com.example.SyedFatima_AnimeApp.DB.AnimeDBCommands.*;
+import com.example.SyedFatima_AnimeApp.Model.Anime;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,9 +42,17 @@ public class FragmentList extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private AnimeDBHelper dbHelper;
+    private SQLiteDatabase db;
+    Fragment fragment;
 
     public FragmentList() {
         // Required empty public constructor
+    }
+    public FragmentList(AnimeDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
+        this.fragment = this;
     }
 
     /**
@@ -59,6 +86,43 @@ public class FragmentList extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        View v = inflater.inflate(R.layout.fragment_list, container, false);
+
+        ArrayList<Anime> arrayAnime = dbHelper.getAllData(db);
+
+        //finding properties and creating them
+        Button deleteButton = v.findViewById(R.id.deleteBtn);
+
+        //if delete button clicked then delete all the anime from the db
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                .setTitle("Delete animes")
+                .setMessage("Are you sure you want to delete all animes?")
+
+                // Specifying a listener allows you to take an action before dismissing the dialog.
+                // The dialog is automatically dismissed when a dialog button is clicked.
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dbHelper.deleteAllData(db);
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        ft.detach(fragment).attach(fragment).commit();
+                        Toast.makeText(getActivity(), "All animes have been deleted.",
+                        Toast.LENGTH_LONG).show();
+                    }
+                })
+                // A null listener allows the button to dismiss the dialog and take no further action.
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+            }
+        });
+
+        RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), arrayAnime);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager((getContext())));
+
+        return v;
     }
 }

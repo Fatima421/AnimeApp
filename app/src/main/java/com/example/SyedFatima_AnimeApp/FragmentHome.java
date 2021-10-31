@@ -1,12 +1,18 @@
 package com.example.SyedFatima_AnimeApp;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +25,8 @@ public class FragmentHome extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private AnimeDBHelper dbHelper;
+    private SQLiteDatabase db;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -26,6 +34,11 @@ public class FragmentHome extends Fragment {
 
     public FragmentHome() {
         // Required empty public constructor
+    }
+
+    public FragmentHome(AnimeDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
     }
 
     /**
@@ -59,6 +72,24 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //finding properties and creating them
+        Button goToAddAnime = v.findViewById(R.id.goToAddAnime_btn);
+        Button goToListAnime = v.findViewById(R.id.goToSeeAnimeList_btn);
+
+        //if go to add anime clicked then go to the add anime screen
+        goToAddAnime.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentForm(dbHelper, db)).commit();
+            }
+        });
+        //if go to list anime clicked then go to anime list screen
+        goToListAnime.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentList(dbHelper, db)).commit();
+            }
+        });
+        return v;
     }
 }

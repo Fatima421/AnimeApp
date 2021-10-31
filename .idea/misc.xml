@@ -5,10 +5,13 @@
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.1890625" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1600877192982456" />
+        <entry key="app/src/main/res/drawable/add_white.xml" value="0.25234375" />
         <entry key="app/src/main/res/drawable/custom_email_icon.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/custom_input.xml" value="0.1685185185185185" />
+        <entry key="app/src/main/res/drawable/custom_input_lightpurple.xml" value="0.17847222222222223" />
         <entry key="app/src/main/res/drawable/custom_lock_icon.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/email_focus.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/focused_custom_input.xml" value="0.25234375" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.1712962962962963" />
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1537037037037037" />
@@ -25,10 +28,10 @@
         <entry key="app/src/main/res/layout/activity_list_screen.xml" value="0.26973684210526316" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_principal_screen.xml" value="0.26973684210526316" />
-        <entry key="app/src/main/res/layout/fragment_form.xml" value="0.26973684210526316" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/fragment_form.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.26973684210526316" />
-        <entry key="app/src/main/res/layout/item_list.xml" value="0.26973684210526316" />
+        <entry key="app/src/main/res/layout/item_list.xml" value="0.5" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.26973684210526316" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.2662337662337662" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.26973684210526316" />
