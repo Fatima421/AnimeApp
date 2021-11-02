@@ -101,6 +101,7 @@ public class FragmentForm extends Fragment implements AdapterView.OnItemSelected
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        //this button allows you to add an anime to the list getting all the values from the different fields.
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String animeName = "";

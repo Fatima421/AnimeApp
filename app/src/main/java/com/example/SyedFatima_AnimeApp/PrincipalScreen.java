@@ -28,10 +28,13 @@ public class PrincipalScreen extends AppCompatActivity {
         dbHelper = new AnimeDBHelper(this);
         db = dbHelper.getWritableDatabase();
 
+        //Creation of the properties
         BottomNavigationView bottomNav = findViewById(R.id.main_menu);
 
+        //Starting the Principal Screen initializing the FragmentHome
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
 
+        //Depending on which Fragment is selected create a new Fragment of that type
         bottomNav.setOnNavigationItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             switch (item.getItemId()){
@@ -54,6 +57,7 @@ public class PrincipalScreen extends AppCompatActivity {
         });
     }
 
+    //destroying the db
     @Override
     protected void onDestroy() {
         dbHelper.close();

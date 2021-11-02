@@ -2,6 +2,7 @@ package com.example.SyedFatima_AnimeApp.DB;
 
 import android.provider.BaseColumns;
 
+//A class that containts the table_name, the id and the columns for an anime table in the database.
 public class AnimeDBCommands {
     private AnimeDBCommands(){}
     public static class AnimeEntry implements BaseColumns {

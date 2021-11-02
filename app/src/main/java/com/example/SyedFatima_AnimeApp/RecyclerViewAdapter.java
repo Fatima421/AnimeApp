@@ -18,11 +18,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Anime> arrayAnime;
     private Context context;
 
+    //constructor
     public RecyclerViewAdapter(Context c, ArrayList<Anime> arrN){
         this.arrayAnime = arrN;
         this.context = c;
     }
 
+    //Creating a new onCreateViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,7 +33,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return holder;
     }
 
-
+    //Setting values to every field item by item
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nameTxt.setText(arrayAnime.get(position).getName());
@@ -44,11 +46,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
+    //counting the items in a anime list
     @Override
     public int getItemCount() {
         return arrayAnime.size();
     }
 
+    //Creating properties and finding them in the view
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView nameTxt;
         TextView genreTxt;

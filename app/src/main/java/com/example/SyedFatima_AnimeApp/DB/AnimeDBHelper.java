@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 public class AnimeDBHelper extends SQLiteOpenHelper {
+    //properties
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "anime.db";
 
@@ -57,6 +58,7 @@ public class AnimeDBHelper extends SQLiteOpenHelper {
         }
     }
 
+    //This function selects all the data from the anime table and creates a new anime object with the values
     public ArrayList<Anime> getAllData(SQLiteDatabase db){
         ArrayList<Anime> arrayAnime = new ArrayList<Anime>();
 
@@ -75,6 +77,7 @@ public class AnimeDBHelper extends SQLiteOpenHelper {
         return arrayAnime;
     }
 
+    //This function deletes all data from an anime table
     public void deleteAllData(SQLiteDatabase db){
         db.execSQL("delete from "+ AnimeEntry.TABLE_NAME);
     }

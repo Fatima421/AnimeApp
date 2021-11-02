@@ -118,6 +118,7 @@ public class FragmentList extends Fragment {
             }
         });
 
+        //initializing the RecyclerView for the list
         RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), arrayAnime);
         recyclerView.setAdapter(adapter);
