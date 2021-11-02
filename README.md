@@ -10,7 +10,7 @@ Instruccions for the usage of the app:
 ![login](https://user-images.githubusercontent.com/72110927/139954969-169a26b9-df91-45cc-85da-2544c6198c9e.png)
 
 ## Home Screen ##
-The home screen helps you go to the two main screens. It contains two buttons to redirect you to the other screens. It also has two icons hinting the function of the rest of the screens.
+The home screen helps you go to the two main screens. It contains two button and has two icons hinting the function of the rest of the screens.
   - Add anime button -> takes you to the form screen
   - See anime list -> takes you to the list screen
   
@@ -27,7 +27,10 @@ The list screen is basically a screen that contains a list of animes. In the fut
 
 ![list](https://user-images.githubusercontent.com/72110927/139955917-6d553744-ff6b-4423-830d-18ae551439f0.jpg)
 
-
+## Classes used ##
+ * onBindViewHolder. Afegeix el contingut als elements declarats al ViewHolder
+ * getItemCount. Ens diu quants elements haurà d’iterar de la llista
+ * ViewHolder. Enllaça els elements de l’item_list amb el RecyclerView
 
 ## Structure of the project ##
 
