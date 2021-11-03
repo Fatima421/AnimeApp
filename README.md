@@ -28,7 +28,7 @@ The list screen is basically a screen that contains a list of animes. In the fut
 ![list](https://user-images.githubusercontent.com/72110927/139955917-6d553744-ff6b-4423-830d-18ae551439f0.jpg)
 
 ## Technologies used ##
- * **SQLiteDatabase** for the local storage
+ * **SQLiteDatabase** for the local storage.
  * **Fragment Manager** to have a reusable portion that uses less resources on my app.
  * **RecyclerView** to be able to display the data in the items.
  * **ViewHolder** to join the elements of the item list with the RecyclerView.
