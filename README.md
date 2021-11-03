@@ -27,10 +27,14 @@ The list screen is basically a screen that contains a list of animes. In the fut
 
 ![list](https://user-images.githubusercontent.com/72110927/139955917-6d553744-ff6b-4423-830d-18ae551439f0.jpg)
 
-## Classes used ##
- * onBindViewHolder. Afegeix el contingut als elements declarats al ViewHolder
- * getItemCount. Ens diu quants elements haurà d’iterar de la llista
- * ViewHolder. Enllaça els elements de l’item_list amb el RecyclerView
+## Technologies used ##
+ * **SQLiteDatabase** for the local storage
+ * **Fragment Manager** to have a reusable portion that uses less resources on my app.
+ * **RecyclerView** to be able to display the data in the items.
+ * **ViewHolder** to join the elements of the item list with the RecyclerView.
+ * **OnBindViewHolder** to add content to the elements in the ViewHolder.
+ * **Dialog** to be able to show an alert to the user and warn them before taking a decision.
+ * **Toast** to display information fast and for a short time.
 
 ## Structure of the project ##
 
