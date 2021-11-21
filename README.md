@@ -48,6 +48,8 @@ The settings screen gives you the option to change the app's language (in this c
  * **OnBindViewHolder** to add content to the elements in the ViewHolder.
  * **Dialog** to be able to show an alert to the user and warn them before taking a decision.
  * **Toast** to display information fast and for a short time.
+ * **Shared Preferences** to be able to save and use later various data of the app.
+ * **Bundle class** to be able to pass the data to different screens.
 
 ## Structure of the project ##
 
