@@ -25,18 +25,19 @@ The form screen gives you the option to be able to add your own anime to the lis
 ## List Screen ##
 The list screen is basically a screen that contains a list of animes. In the future it will be able to load animes from an API and show them in here, but for now it shows you the anime you add manually via the form screen. In this version of the app it contains a default anime image and it shows you properties as the name, the genre and the ranking of an anime. It also has a button to delete all the animes you have added.
 
-![detail](https://user-images.githubusercontent.com/72110927/142777726-2076fe10-8314-433a-b38c-4816f2740610.jpg)
+![list](https://user-images.githubusercontent.com/72110927/142777785-640c52e0-8874-4e19-b14e-139f2fc762cf.jpg)
 
 
 ## Item Detail Screen ##
 The item detail screen shows you the detail of the item you have selected. You can see the anime name, genre, ranking and (the photo in future implementations). Once in the screen you can also edit the text fields and save the new value.
 
-![detail](https://user-images.githubusercontent.com/72110927/142777415-31678c6e-6561-4654-9d7e-d437655b7dec.jpg)
+![detail](https://user-images.githubusercontent.com/72110927/142777790-122ae8d9-2469-4ba3-a6a5-7dee0b57f410.jpg)
+
 
 ## Settings Screen ##
 The settings screen gives you the option to change the app's language (in this case you can cahnge it to english or spanish). It also has the option to be able to change the theme (dark or light mode). And last but not least you can delete all your saved data, that includes the login session, the language you selected (it detects your phone local language) and the theme you choose (it's light per default).
 
-![settings](https://user-images.githubusercontent.com/72110927/142777635-f1c67293-eeac-4992-9758-7a7d9ff26ecc.jpg)
+![settings](https://user-images.githubusercontent.com/72110927/142777794-d7422a96-50ca-42cb-bb2e-671bb3977583.jpg)
 
 
 ## Technologies used ##
