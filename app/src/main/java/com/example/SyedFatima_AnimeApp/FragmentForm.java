@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
 import com.example.SyedFatima_AnimeApp.Model.Anime;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -89,6 +92,9 @@ public class FragmentForm extends Fragment implements AdapterView.OnItemSelected
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_form, container, false);
 
+        //to push the view up when keyboard shows
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams. SOFT_INPUT_ADJUST_RESIZE);
+
         //finding all the properties in the view to program in the code
         spinner = (Spinner) v.findViewById(R.id.spinner);
         FloatingActionButton btnAdd = v.findViewById(R.id.addBtn);
@@ -118,7 +124,7 @@ public class FragmentForm extends Fragment implements AdapterView.OnItemSelected
                 }
                 Anime anime = new Anime(animeName,animeGenre,animeRanking);
                 dbHelper.insertAnime(db, anime);
-                Toast.makeText(getActivity(), "You have inserted correctly an anime to the list!",
+                Toast.makeText(getActivity(), getString(R.string.formScreenToast),
                         Toast.LENGTH_LONG).show();
             }
         });

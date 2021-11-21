@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
+import com.example.SyedFatima_AnimeApp.Model.Anime;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.

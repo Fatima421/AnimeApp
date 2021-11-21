@@ -21,6 +21,7 @@ public class AnimeDBHelper extends SQLiteOpenHelper {
     //properties
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "anime.db";
+    int id;
 
     private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + AnimeEntry.TABLE_NAME + "(" + AnimeEntry.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + AnimeEntry.COLUMN_NAME_TITLE + " TEXT, " + AnimeEntry.COLUMN_GENRE_TITLE + " TEXT, " + AnimeEntry.COLUMN_RANKING_TITLE + " INT)";
 
@@ -66,6 +67,7 @@ public class AnimeDBHelper extends SQLiteOpenHelper {
         Cursor resultSet = db.rawQuery("Select * from anime",null);
         if (resultSet.moveToFirst()) {
             do {
+                id = resultSet.getInt(0);
                 String name = resultSet.getString(1);
                 String genre = resultSet.getString(2);
                 int ranking = resultSet.getInt(3);
@@ -78,7 +80,23 @@ public class AnimeDBHelper extends SQLiteOpenHelper {
     }
 
     //This function deletes all data from an anime table
-    public void deleteAllData(SQLiteDatabase db){
+    public void deleteAllData(SQLiteDatabase db) {
         db.execSQL("delete from "+ AnimeEntry.TABLE_NAME);
+    }
+
+    public void updateData(SQLiteDatabase db, String newAnimeTitle, String newGenre, String newRanking) {
+        Cursor resultSet = db.rawQuery("Select * from anime",null);
+        if (resultSet.moveToFirst()) {
+            do {
+                id = resultSet.getInt(0);
+            } while (resultSet.moveToNext());
+        }
+        resultSet.close();
+        ContentValues values =  new ContentValues();
+        values.put(AnimeEntry.COLUMN_NAME_TITLE, newAnimeTitle);
+        values.put(AnimeEntry.COLUMN_GENRE_TITLE, newGenre);
+        values.put(AnimeEntry.COLUMN_RANKING_TITLE, newRanking);
+
+        db.update(AnimeEntry.TABLE_NAME, values, "ID=" + id, null);
     }
 }

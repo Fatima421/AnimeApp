@@ -2,8 +2,9 @@ package com.example.SyedFatima_AnimeApp.Model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.io.Serializable;
 
-public class Anime {
+public class Anime implements Serializable {
     private static Anime anime;
     String name;
     String genre;

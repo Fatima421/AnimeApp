@@ -1,6 +1,7 @@
 package com.example.SyedFatima_AnimeApp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -49,6 +50,10 @@ public class PrincipalScreen extends AppCompatActivity {
                 case R.id.nav_add:
                     selectedFragment = new FragmentForm(dbHelper, db);
                     break;
+
+                case R.id.nav_settings:
+                    selectedFragment = new FragmentSettings();
+                    break;
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
@@ -63,6 +68,11 @@ public class PrincipalScreen extends AppCompatActivity {
         dbHelper.close();
         db.close();
         super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.moveTaskToBack(true);
     }
 
 }

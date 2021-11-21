@@ -1,0 +1,57 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foregroundTint="#00FFFFFF">
+
+    <PreferenceCategory app:title="@string/settings" />
+
+    <PreferenceCategory app:title="@string/generalConfiguration">
+
+        <ListPreference
+            android:backgroundTint="#673AB7"
+            app:entries="@array/language"
+            app:entryValues="@array/language"
+            app:key="language"
+            app:summary="@string/selectLanguage"
+            app:title="@string/language" />
+
+        <ListPreference
+            app:entries="@array/theme"
+            app:entryValues="@array/theme"
+            app:key="theme"
+            app:summary="@string/selectTheme"
+            app:title="@string/theme" />
+
+    </PreferenceCategory>
+    <!--
+    <PreferenceCategory app:title="Saved data">
+
+        <SwitchPreferenceCompat
+            app:key="save"
+            app:title="Save data" />
+
+        <SwitchPreferenceCompat
+            app:dependency="save"
+            app:key="save"
+            app:summaryOff="You can clear all your saved data with this button."
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="Delete data" />
+
+    </PreferenceCategory>
+    -->
+    <PreferenceCategory app:title="@string/savedData"></PreferenceCategory>
+    <Preference
+        app:key="deleteData"
+        app:summary="@string/deleteAllData"
+        app:title="@string/deleteData" />
+
+    <PreferenceCategory app:title="@string/information">
+
+        <EditTextPreference
+            app:key="about"
+            app:selectable="false"
+            app:summary="@string/knowMore"
+            app:title="@string/about" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

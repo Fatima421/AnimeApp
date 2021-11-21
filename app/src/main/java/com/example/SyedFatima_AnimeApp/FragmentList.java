@@ -1,6 +1,5 @@
 package com.example.SyedFatima_AnimeApp;
 
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -13,14 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.example.SyedFatima_AnimeApp.DB.AnimeDBHelper;
-import com.example.SyedFatima_AnimeApp.DB.AnimeDBCommands.*;
 import com.example.SyedFatima_AnimeApp.Model.Anime;
 
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
@@ -91,23 +86,23 @@ public class FragmentList extends Fragment {
         ArrayList<Anime> arrayAnime = dbHelper.getAllData(db);
 
         //finding properties and creating them
-        Button deleteButton = v.findViewById(R.id.deleteBtn);
+        Button deleteButton = v.findViewById(R.id.deleteDataBtn);
 
         //if delete button clicked then delete all the anime from the db
         deleteButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
-                .setTitle("Delete animes")
-                .setMessage("Are you sure you want to delete all animes?")
+                .setTitle(getString(R.string.deleteAnime))
+                .setMessage(getString(R.string.alertDeleteAnimes))
 
                 // Specifying a listener allows you to take an action before dismissing the dialog.
                 // The dialog is automatically dismissed when a dialog button is clicked.
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dbHelper.deleteAllData(db);
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         ft.detach(fragment).attach(fragment).commit();
-                        Toast.makeText(getActivity(), "All animes have been deleted.",
+                        Toast.makeText(getActivity(), getString(R.string.alertResultAfterDelete),
                         Toast.LENGTH_LONG).show();
                     }
                 })
@@ -120,7 +115,7 @@ public class FragmentList extends Fragment {
 
         //initializing the RecyclerView for the list
         RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), arrayAnime);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), arrayAnime, dbHelper, db);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((getContext())));
 
