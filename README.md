@@ -25,7 +25,7 @@ The form screen gives you the option to be able to add your own anime to the lis
 ## List Screen ##
 The list screen is basically a screen that contains a list of animes. In the future it will be able to load animes from an API and show them in here, but for now it shows you the anime you add manually via the form screen. In this version of the app it contains a default anime image and it shows you properties as the name, the genre and the ranking of an anime. It also has a button to delete all the animes you have added.
 
-![list](https://user-images.githubusercontent.com/72110927/139955917-6d553744-ff6b-4423-830d-18ae551439f0.jpg)
+![detail](https://user-images.githubusercontent.com/72110927/142777726-2076fe10-8314-433a-b38c-4816f2740610.jpg)
 
 
 ## Item Detail Screen ##
