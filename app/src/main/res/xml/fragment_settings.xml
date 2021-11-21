@@ -7,7 +7,6 @@
     <PreferenceCategory app:title="@string/generalConfiguration">
 
         <ListPreference
-            android:backgroundTint="#673AB7"
             app:entries="@array/language"
             app:entryValues="@array/language"
             app:key="language"

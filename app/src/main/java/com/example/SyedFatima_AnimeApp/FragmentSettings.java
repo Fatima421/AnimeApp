@@ -103,7 +103,7 @@ public class FragmentSettings extends PreferenceFragmentCompat {
             if (prefs.getBoolean("nightMode", false)){
                 themePreference.setValue(getString(R.string.darkMode));
             }else {
-                langPreference.setValue(getString(R.string.lightMode));
+                themePreference.setValue(getString(R.string.lightMode));
             }
         }
 

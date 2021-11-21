@@ -42,4 +42,9 @@
     <string name="alertDeleteAnimes">"Estás seguro de que quieres eliminar todos los animes?"</string>
     <string name="alertResultAfterDelete">Todos los animes han sido eliminados</string>
     <string name="settings">Ajustes</string>
+    <string name="title">TITULO</string>
+    <string name="genre">GÉNERO</string>
+    <string name="rankingMayus">PUNTUACIÓN</string>
+    <string name="edit">EDITAR</string>
+    <string name="save">GUARDAR</string>
 </resources>
