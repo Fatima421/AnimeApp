@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reply Preference -->
+    <array name="language">
+        <item>@string/english</item>
+        <item>@string/spanish</item>
+    </array>
+
+    <integer-array name="language_values">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <array name="theme">
+        <item>@string/lightMode</item>
+        <item>@string/darkMode</item>
+    </array>
+
+    <integer-array name="theme_values">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+</resources>

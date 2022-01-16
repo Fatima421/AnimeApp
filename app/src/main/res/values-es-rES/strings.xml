@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anime_app</string>
+
+    <string-array name="genres">
+        <item>Género</item>
+        <item>Romance</item>
+        <item>Acción</item>
+        <item>Comedia</item>
+        <item>Drama</item>
+        <item>Historia</item>
+        <item>Fantasía</item>
+    </string-array>
+
+    <string name= "login">Login</string>
+    <string name= "rememberMe">Recordarme</string>
+    <string name= "addAnime">Añadir un anime</string>
+    <string name= "animeName">Nombre de anime</string>
+    <string name= "ranking">Puntuación</string>
+    <string name= "animeList">Ver lista</string>
+    <string name= "delete">Eliminar</string>
+    <string name= "generalConfiguration">Configuración general</string>
+    <string name= "language">Idioma</string>
+    <string name= "selectLanguage">Selecciona tu idioma</string>
+    <string name= "theme">Tema</string>
+    <string name= "selectTheme">Selecciona tu tema</string>
+    <string name= "deleteData">Elimina datos</string>
+    <string name= "deleteAllData">Elimina todos tus datos pulsando aquí</string>
+    <string name= "savedData">Datos guardados</string>
+    <string name= "information">Información</string>
+    <string name= "about">Sobre nosotros</string>
+    <string name= "knowMore">Descubre más sobre nosotros</string>
+    <string name="english">Ingles</string>
+    <string name="spanish">Español</string>
+    <string name="lightMode">Tema claro</string>
+    <string name="darkMode">Tema oscuro</string>
+    <string name="biometricTitle">Login biométrico para la aplicación</string>
+    <string name="biometricMessage">Inicia sesión con tu huella dactilar</string>
+    <string name="close">Cerrar</string>
+    <string name = "formScreenToast">"Has insertado correctamente un anime en la lista!"</string>
+    <string name="deleteAnime">"Eliminar animes"</string>
+    <string name="alertDeleteAnimes">"Estás seguro de que quieres eliminar todos los animes?"</string>
+    <string name="alertResultAfterDelete">Todos los animes han sido eliminados</string>
+    <string name="settings">Ajustes</string>
+    <string name="title">TITULO</string>
+    <string name="genre">GÉNERO</string>
+    <string name="rankingMayus">PUNTUACIÓN</string>
+    <string name="edit">EDITAR</string>
+    <string name="save">GUARDAR</string>
+</resources>

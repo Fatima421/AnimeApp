@@ -11,24 +11,24 @@
         <item>Fantasy</item>
     </string-array>
 
-    <string name="login">Login</string>
-    <string name="rememberMe">Remember Me</string>
-    <string name="addAnime">Add an anime</string>
-    <string name="animeName">Anime name</string>
-    <string name="ranking">Ranking</string>
-    <string name="animeList">See anime list</string>
-    <string name="delete">Delete</string>
-    <string name="generalConfiguration">General configuration</string>
-    <string name="language">Language</string>
-    <string name="selectLanguage">Select your language</string>
-    <string name="theme">Theme</string>
-    <string name="selectTheme">Select your theme</string>
-    <string name="deleteData">Delete data</string>
-    <string name="deleteAllData">Delete all your data by clicking this button</string>
-    <string name="savedData">Saved data</string>
-    <string name="information">Information</string>
-    <string name="about">About</string>
-    <string name="knowMore">Know more about us</string>
+    <string name= "login">Login</string>
+    <string name= "rememberMe">Remember Me</string>
+    <string name= "addAnime">Add an anime</string>
+    <string name= "animeName">Anime name</string>
+    <string name= "ranking">Ranking</string>
+    <string name= "animeList">See anime list</string>
+    <string name= "delete">Delete</string>
+    <string name= "generalConfiguration">General configuration</string>
+    <string name= "language">Language</string>
+    <string name= "selectLanguage">Select your language</string>
+    <string name= "theme">Theme</string>
+    <string name= "selectTheme">Select your theme</string>
+    <string name= "deleteData">Delete data</string>
+    <string name= "deleteAllData">Delete all your data by clicking this button</string>
+    <string name= "savedData">Saved data</string>
+    <string name= "information">Information</string>
+    <string name= "about">About</string>
+    <string name= "knowMore">Know more about us</string>
     <string name="english">English</string>
     <string name="spanish">Spanish</string>
     <string name="lightMode">Light Mode</string>
