@@ -1,4 +1,4 @@
-# SyedFatima_AnimeApp
+# First project in Android Studio
 I have created an anime app for a school project. This app has 4 screens; a login screen, a home screen, a list screen and a form screen.
 
 ## Login Screen ##
